@@ -39,7 +39,7 @@ export default function Earth(props) {
       {/* <ambientLight intensity={ 1 } /> */}
       <pointLight
         color="#f5f7f5"
-        position={ [2, 0, 2] }
+        position={ [2, 0, 3] }
         intensity={ 1.2}
       />
       <mesh ref={ cloudRef}>
@@ -54,7 +54,7 @@ export default function Earth(props) {
           roughness={ 0.7}
         />
       </mesh>
-      <mesh ref={ earthRef}>
+      <mesh ref={ earthRef} >
         <sphereGeometry args={ [2, 32, 32] } />
         <meshPhongMaterial specularMap={specularMap} />
         <meshStandardMaterial
@@ -62,13 +62,13 @@ export default function Earth(props) {
           normalMap={ normalMap}
         />
         <OrbitControls
-        enableZoom={ true }
-        zoomSpeed={ 0.5 }
-        enablePan={ true }
-        panSpeed={ 0.5 }
-        enableRotate={ true }
-        rotateSpeed={ 0.4 }
-      />
+          enableZoom={ true }
+          zoomSpeed={ 0.5 }
+          enablePan={ true }
+          panSpeed={ 0.5 }
+          enableRotate={ true }
+          rotateSpeed={ 0.4 }
+        />
       </mesh>
     </>
   

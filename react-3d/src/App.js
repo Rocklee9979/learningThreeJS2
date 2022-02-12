@@ -8,16 +8,19 @@ const CanvasContainer = styled.div`
   height: 100%;
 `;
 
+
+
 function App() {
-  return (
+  return <>
     <CanvasContainer>
-      <Canvas>
+      
+      <Canvas style={ {position: 'fixed'}}>
         <Suspense fallback={null}>
           <Earth />
         </Suspense>
       </Canvas>
     </CanvasContainer>
-  );
+  </>
 }
 
 export default App;
